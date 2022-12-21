@@ -28,7 +28,7 @@
   top: 10px;
 
   border-radius: 50%;
-  border-color: #61dafb;
+  outline-color: #282c34;
   border-width: 100px;
  
   background: #7F5539;
@@ -83,3 +83,21 @@
   }
 }
 
+
+.LibraryLayout{
+  margin-left: auto;
+  margin-top: 100px;
+  margin-right: auto;
+  top: 500px;
+  height: 600px;
+  width: 1000px;
+}
+
+.LibraryContentLayout {
+  width: 1000px;
+  height: 550px;
+  margin: 10px;
+  background-color: #EDE0D4;
+  border-radius: 25px;
+  overflow-y: auto;
+}

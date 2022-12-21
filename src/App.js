@@ -1,5 +1,8 @@
 import './App.css';
+import Library from './Components/Library';
 import { UserProfile } from './Components/UserProfile';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -8,6 +11,7 @@ function App() {
       <h1 className='CozyCorner' fixed="top" >Cozy Corner</h1>
 
       <UserProfile /> 
+      <Library />
 
     </div>
   );

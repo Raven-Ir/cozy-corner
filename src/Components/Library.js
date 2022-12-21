@@ -1,6 +1,10 @@
 import React, {useState} from "react";
+import Button  from "react-bootstrap/Button";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
+import { useBootstrapPrefix } from "react-bootstrap/esm/ThemeProvider";
+import '../App.css'
+import { ToggleButtonGroup } from "react-bootstrap";
 
 function Library () {
     const[checked, setChecked] = useState(false);
@@ -13,21 +17,29 @@ function Library () {
     ];
 
     return(
-        <div className="LibraryButtons">
-            <ButtonGroup className="mb-2">
-                {radios.map((map, index) => (
+        
+            <div className="LibraryLayout">
+                <div className="LibraryButtons">
+                    {radios.map((radio, index) => (
+                        <ToggleButton
+                            key = {index}
+                            id = {`radio-${index}`}
+                            type = "radio"
+                            name="radio"
+                            value = {radio.value}
+                            checked = {radioValue === radio.value}
+                            onChange = {(e) => setRadioValue(e.currentTarget.value)}
+                            variant = "outline-dark"
+                        >
+                            {radio.name}
+                        </ToggleButton>
+                    ))}
+                </div>
+                <div className="LibraryContentLayout">
+                </div>
 
-                    <ToggleButton 
-                        key={index}
-                        id={`radio-${index}`}
-                        type="radio"
-                        variant=""
-                    >
-                        {radio.name}
-                    </ToggleButton>
-                ))}
-            </ButtonGroup>
-        </div>
+            </div>
+        
 
     );
 
