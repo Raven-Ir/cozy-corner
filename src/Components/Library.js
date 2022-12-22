@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 import Button  from "react-bootstrap/Button";
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { useBootstrapPrefix } from "react-bootstrap/esm/ThemeProvider";
 import '../App.css'
-import { ToggleButtonGroup } from "react-bootstrap";
 
 function Library () {
     const[checked, setChecked] = useState(false);
@@ -35,9 +33,7 @@ function Library () {
                         </ToggleButton>
                     ))}
                 </div>
-                <div className="LibraryContentLayout">
-                </div>
-
+                <div className="LibraryContentLayout"></div>
             </div>
         
 
