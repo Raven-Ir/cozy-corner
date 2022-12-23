@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       
-      <SideBar />
+      
       <h1 className='CozyCorner' fixed="top" >Cozy Corner</h1>
-
+      <SideBar />
       <UserProfile /> 
       <Library />
       

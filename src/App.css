@@ -102,6 +102,20 @@
   overflow-y: auto;
 }
 
-#SideBar {
-  align-self: left;
+.side-bar {
+  float: left;
+  width: 200px;
+  height: 400px;
+ margin-top: 200px;
+ margin-left: 30px;
+
+}
+
+.nav-link {
+  color: #7F5539 !important;
+  font-size: x-large !important;
+}
+
+.nav-link a:hover {
+  color: #7F5539;
 }
