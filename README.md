@@ -10,7 +10,9 @@ for books contained in Books API to add to your personal digital library.
 ### Personal library with three categories:
 
 Main Library: Where all the user's books are automatically saved at.
+
 To Be Read (TBR): Books the user would like to read.
+
 Did Not Finish (DNF): Books the user did not or even will not ever finish.
 
 ### Explore Page
