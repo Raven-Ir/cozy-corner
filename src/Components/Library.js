@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Button  from "react-bootstrap/Button";
 import ToggleButton from 'react-bootstrap/ToggleButton';
-import { useBootstrapPrefix } from "react-bootstrap/esm/ThemeProvider";
 import '../App.css'
 
 function Library () {
@@ -27,7 +26,7 @@ function Library () {
                             value = {radio.value}
                             checked = {radioValue === radio.value}
                             onChange = {(e) => setRadioValue(e.currentTarget.value)}
-                            variant = "outline-dark"
+                            variant = "outline-light"
                         >
                             {radio.name}
                         </ToggleButton>

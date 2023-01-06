@@ -11,8 +11,8 @@ function App() {
       
       
       <h1 className='CozyCorner' fixed="top" >Cozy Corner</h1>
-      <SideBar />
       <UserProfile /> 
+      <SideBar />
       <Library />
       
 
