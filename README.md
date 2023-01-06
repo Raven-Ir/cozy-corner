@@ -24,5 +24,4 @@ Main Library, it could be all or none.
 
 ## What technologies are used?
 
-Up untill this point, the project's UI was prototyped with Figma and the FrontEnd
-Development is being built with React.js and Bootstrap are used.
+Up untill this point, the project's UI was prototyped with Figma and the FrontEnd is being built with React.js and Bootstrap are used.
