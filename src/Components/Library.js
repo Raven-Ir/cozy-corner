@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import Button  from "react-bootstrap/Button";
 import ToggleButton from 'react-bootstrap/ToggleButton';
-import '../App.css'
+import '../index.css';
+
 
 function Library () {
     const[checked, setChecked] = useState(false);
@@ -16,7 +16,7 @@ function Library () {
     return(
         
             <div className="LibraryLayout">
-                <div className="LibraryButtons">
+                <div className='library-buttons'>
                     {radios.map((radio, index) => (
                         <ToggleButton
                             key = {index}

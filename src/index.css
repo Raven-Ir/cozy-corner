@@ -1,15 +1,207 @@
-body {
+* {
+  background-color: #DDB892 ;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* User Profile */
+.ProfileImage {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 20px;
+  top: 10px;
+
+  border-radius: 50%;
+  outline-color: #282c34;
+  border-width: 100px;
+ 
+  background: #7F5539;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
+/* Cozy Corner */
+.CozyCorner {
+  position: absolute;
+  width: 248px;
+  height: 48px;
+  left: 20px;
+  top: 20px;
+
+  padding-top: 0;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #7F5539;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.LibraryLayout{
+  margin-left: auto;
+  margin-top: 100px;
+  margin-right: auto;
+  top: 500px;
+  height: 600px;
+  width: 1000px;
+}
+
+.LibraryContentLayout {
+  position: fixed;
+  width: 1000px;
+  height: 550px;
+  margin: 10px;
+  background-color: #EDE0D4;
+  border-radius: 25px;
+  overflow-y: auto;
+}
+
+.side-bar {
+  position: fixed;
+  float: left;
+  width: 200px;
+  height: 400px;
+  margin-top: 200px;
+  margin-left: 30px;
+
+}
+
+.nav-link {
+  color: #7F5539 !important;
+  font-size: x-large !important;
+}
+
+.library-buttons {
+  margin: auto;
+  margin-left: 35%;
+}
+
+.l-cozy {
+  position: absolute;
+  width: 590px;
+  height: 155px;
+  left: 50px;
+  top: 200px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 155px;
+  /* identical to box height */
+
+
+  color: #7F5539;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+
+}
+
+.line {
+  position: absolute;
+  height: 500px;
+  left: 500px;
+  top: 100px;
+  padding: 0%;
+  margin: 0%;
+
+  border-left: 5px solid #7F5539;
+}
+
+.slogan {
+  position: absolute;
+  width: 639px;
+  height: 96px;
+  left: 580px;
+  top: 290px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #7F5539;
+}
+
+.in {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 1180px;
+  top: 20px;
+
+  border: 0px;
+
+  background: #7F5539;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+
+  color: #EDE0D4;
+
+  backdrop-filter: blur(2px);
+}
+
+.up {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 1350px;
+  top: 20px;
+
+  border: 0px;
+
+  background: #EDE0D4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+
+  color: #7F5539;
+
+  backdrop-filter: blur(2px);
+
+}
