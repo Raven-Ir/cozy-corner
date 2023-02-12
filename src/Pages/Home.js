@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../index.css'
 
 const Home = () => {
@@ -11,8 +12,12 @@ const Home = () => {
             of your books online
         </p>
         <div className='buttons'>
-            <button className='in'> Sign Up </button>
-            <button className='up'> Sign In</button>
+          <Link to='/login'>
+            <button className='in'> Sign In </button>
+          </Link>
+          <Link to='/signup'>
+            <button className='up'> Sign Up</button>
+          </Link>
         </div>
     </div>
   )
