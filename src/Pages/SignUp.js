@@ -9,9 +9,10 @@ const SignUp = () => {
       
       <div className='bg-image' ></div>
       <div className='d-flex flex-column min-vh-100 justify-content-center align-items-center'>
-          <Form className='p-3 border border-4 row-2 rounded border-light'>
+          <h1 className='p-2 fs-1 fw-bold'>Sign Up</h1>
+          <Form className='p-3 border border-4 row-2 rounded' fontFamily = "Source Sans Pro" style={{borderColor: "#DDB892"}}>
             <Form.Group>
-              <Form.Label className='fs-3 fw-bold'>Email Address</Form.Label>
+              <Form.Label className='fs-3 fw-bold '>Email Address</Form.Label>
               <Form.Control type='email' placeholder='Enter your email' />
               <Form.Text className='text-muted'>
                 We will not share your email with anyone else!
@@ -31,25 +32,3 @@ const SignUp = () => {
 }
 
 export default SignUp;
-
-
-<Form style={{ width: '18rem' }} className='bg-blue-200'>
-<Form.Group className="mb-3" controlId="formBasicEmail">
-  <Form.Label>Email address</Form.Label>
-  <Form.Control type="email" placeholder="Enter email" />
-  <Form.Text className="text-muted">
-    We'll never share your email with anyone else.
-  </Form.Text>
-</Form.Group>
-
-<Form.Group className="mb-3" controlId="formBasicPassword">
-  <Form.Label>Password</Form.Label>
-  <Form.Control type="password" placeholder="Password" />
-</Form.Group>
-<Form.Group className="mb-3" controlId="formBasicCheckbox">
-  <Form.Check type="checkbox" label="Check me out" />
-</Form.Group>
-<Button variant="primary" type="submit">
-  Submit
-</Button>
-</Form>
