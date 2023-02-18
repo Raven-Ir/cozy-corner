@@ -1,6 +1,6 @@
 import React from "react";
 import Profile1 from "../Assets/profile.jpg"
-import '../index.css';
+import '../index.css'
 
 
 export const UserProfile = () => {

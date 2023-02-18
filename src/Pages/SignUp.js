@@ -1,34 +1,31 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
 
 const SignUp = () => {
 
+
   return (
     <>
-      
-      <div className='bg-image' ></div>
-      <div className='d-flex flex-column min-vh-100 justify-content-center align-items-center'>
-          <h1 className='p-2 fs-1 fw-bold'>Sign Up</h1>
-          <Form className='p-3 border border-4 row-2 rounded' fontFamily = "Source Sans Pro" style={{borderColor: "#DDB892"}}>
-            <Form.Group>
-              <Form.Label className='fs-3 fw-bold '>Email Address</Form.Label>
-              <Form.Control type='email' placeholder='Enter your email' />
-              <Form.Text className='text-muted'>
-                We will not share your email with anyone else!
-              </Form.Text>
-            </Form.Group>
+      <div className='w-full h-screen'>
+        <div className='fixed w-full px-4 py-48 z-50'>
+          <div className='max-w-[450px] h-[500px] mx-auto border-2 rounded-t-lg border-palette-5'>
+            <div className='max-w-[320px] mx-auto py-16'>
+              <h1 className='text-3xl font-bold text-palette-5 text-center'>Sign Up</h1>
+              <form className='w-full flex flex-col py-4'>
+
+                <input className='p-3 my-2 bg-palette-1' type='text' placeholder='Username'/>
+                <input className='p-3 my-2 bg-palette-1' type='email' placeholder='Email' autoComplete='email'/>
+                <input className='p-3 my-2 bg-palette-1' type='password' placeholder='Password' autoComplete='current-password'/>
+                <button className='py-3 my-6 rounded font-bold bg-palette-5 text-palette-1 text-xl'> Sign Up </button>
               
-            <Form.Group>
-              <Form.Label className='fs-3 fw-bold'>Password</Form.Label>
-              <Form.Control type='password' placeholder='Enter a password' />
-            </Form.Group>
-            <Button variant='light' className='mt-3' type='submit'>Sign Up</Button>
-          </Form>
-      </div> 
-      
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
 
 export default SignUp;
+
+
