@@ -3,20 +3,26 @@ import Home from './Pages/Home'
 import { Route, Routes } from 'react-router';
 import LogIn from './Pages/LogIn';
 import SignUp from './Pages/SignUp';
-// eslint-disable-next-line 
-import usersLibrary from './Pages/usersLibrary'
+import { AuthContextProvider } from './context/AuthContext';
+import ProtectedRoute from './Components/ProtectedRoute';
+import UsersLibrary from './Pages/UsersLibrary';
 
 
 function App() {
   return (
     <>
-        <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/login' element={<LogIn />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/library' element={<usersLibrary />} />
+    <AuthContextProvider>
+          <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/login' element={<LogIn />} />
+              <Route path='/signup' element={<SignUp />} />
+              <Route path='/library' element={
+                <ProtectedRoute>
+                  <UsersLibrary />
+                </ProtectedRoute>
+              } />
           </Routes>
-      
+    </AuthContextProvider>
     </>
   );
 }

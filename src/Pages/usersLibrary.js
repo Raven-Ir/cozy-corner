@@ -1,7 +1,7 @@
 import React from 'react'
 import '../index.css'
 
-const usersLibrary = () => {
+const UsersLibrary = () => {
   return (
     <>
         <h1>LIBRARY</h1>
@@ -9,4 +9,4 @@ const usersLibrary = () => {
   )
 }
 
-export default usersLibrary;
+export default UsersLibrary;
