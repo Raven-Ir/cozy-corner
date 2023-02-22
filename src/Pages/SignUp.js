@@ -14,6 +14,7 @@ const SignUp = () => {
 
   const formSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     try {
       await signUp(email, password);
       navigate('/library');

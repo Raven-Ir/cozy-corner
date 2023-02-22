@@ -6,8 +6,8 @@ import '../index.css'
 export const UserProfile = () => {
     return(
 
-        <div className="ProfileImage">
-            <img src={Profile1} style = {{width: "100%", height: "100%", borderRadius: 50}} alt="User1"/>
+        <div>
+            <img src={Profile1} className="rounded-full w-12 h-12 shadow-md m-2"  alt="User1"/>
         
         </div>
 

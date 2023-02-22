@@ -1,10 +1,15 @@
 import React from 'react'
+import Library from '../Components/Library';
+import NavBar from '../Components/NavBar';
 import '../index.css'
 
 const UsersLibrary = () => {
   return (
     <>
-        <h1>LIBRARY</h1>
+       
+        <NavBar />
+        <Library />
+        
     </>
   )
 }

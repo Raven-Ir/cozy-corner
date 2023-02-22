@@ -1,26 +1,11 @@
 * {
   background-color: #DDB892 ;
+  font-family: 'Inter';
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* User Profile */
-.ProfileImage {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  right: 20px;
-  top: 10px;
-
-  border-radius: 50%;
-  outline-color: #282c34;
-  border-width: 100px;
- 
-  background: #7F5539;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 
 /* Cozy Corner */
@@ -66,20 +51,13 @@
 }
 
 .l-cozy {
-  font-family: 'Inter';
   font-style: normal;
-}
-
-.slogan {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
 .but {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter';
   font-style: normal;
   backdrop-filter: blur(2px);
 }
