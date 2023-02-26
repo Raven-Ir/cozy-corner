@@ -4,13 +4,15 @@ const Book = ( { bookData } ) => {
 
     console.log(bookData.volumeInfo);
 
-    var thumbnail= bookData.volumeInfo.imageLinks && bookData.volumeInfo.imageLinks.thumbnail;
+    var thumbnail= bookData.book_image
   return (
     <>
-        <div className='inline-block items-center cursor-pointer'>
-            <img className='w-32 min-w-min h-fit block border-2 border-palette-4 rounded-md shadow-md'
+        <div className='inline-block items-center cursor-pointer p-2'>
+           <a href={bookData.amazon_product_url}>
+            <img className='h-[200px] w-[147px] block border-2 border-palette-4 rounded-md shadow-md'
              src={thumbnail} 
-             alt={bookData.volumeInfo.title}/>
+             alt={bookData.title}/>
+            </a>
         </div>
         
     </>

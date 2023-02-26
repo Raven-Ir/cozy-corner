@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import '../index.css'
 import axios from 'axios';
 import Book from '../Components/Book';
-import requestsGenre from '../ApiRequests';
+import  requestsBestSellerNYT from '../ApiRequests';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   
   useEffect(() => {
-    axios.get(requestsGenre.crime)
-      .then(results => setBooks(results.data.items));
-  }, [])
+    axios.get(requestsBestSellerNYT.bookSeries)
+      .then(results => setBooks(results.data.results.books))
+      .catch(error => console.log(error));
+  }, []);
 
   console.log(books);
 
@@ -37,14 +38,16 @@ const Home = () => {
             <button className='but ml-4 w-36 h-12 bg-palette-1 rounded-xl text-3xl shadow-inner text-palette-5'> Sign Up </button>
           </Link>
         </div>
-
-        <div className='flex m-2 justify-between mt-[350px] ml-[550px] space-x-10 overflow-x-scroll scrollbar-hide scroll-smooth relative'>
-          {books.map((item, id) => (
-            <Book bookData={item}  key={id}/>
-          ))}
+        
+        <div className='w-auto mt-[350px] ml-[550px] overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
+            {books.map((item, id) => (
+              <Book bookData={item}  key={id}/> 
+            ))}
         </div>
+
     </div></>
   )
 }
 
 export default Home;
+
