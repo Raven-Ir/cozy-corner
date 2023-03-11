@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router';
+import BooksImageFooter from '../Assets/books.png'
+
 
 const SignUp = () => {
   const [userName, setUserName] = useState('');
@@ -15,20 +17,22 @@ const SignUp = () => {
   const formSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    
     try {
-      await signUp(email, password);
+      await signUp(email, password, userName);
       navigate('/library');
 
-    } catch (error) {
+    } catch (err) {
+      setError(err.message);
       console.log(error);
-      setError(error.message);
     }
   }
 
   return (
     <>
-      <div className='w-full h-screen'>
-        <div className='fixed w-full px-4 py-48 z-50'>
+      <div className='w-full h-fit'>
+         <div className='fixed w-full py-[78px] z-50'>
+         <h1 className='text-5xl p-2 font-bold text-palette-5 text-center'>Welcome, to Cozy Corner</h1>
           <div className='max-w-[450px] h-[500px] mx-auto border-2 rounded-t-lg border-palette-5'>
             <div className='max-w-[320px] mx-auto py-16'>
               <h1 className='text-3xl font-bold text-palette-5 text-center'>Sign Up</h1>
@@ -42,6 +46,7 @@ const SignUp = () => {
               </form>
             </div>
           </div>
+          <img className='overflow-hidden mt-20' src={BooksImageFooter} alt='footer books'/>
         </div>
       </div>
     </>

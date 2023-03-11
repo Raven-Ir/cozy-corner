@@ -9,7 +9,7 @@ const Book = ( { bookData } ) => {
     <>
         <div className='inline-block items-center cursor-pointer p-2'>
            <a href={bookData.amazon_product_url}>
-            <img className='h-[200px] w-[147px] block border-2 border-palette-4 rounded-md shadow-md'
+            <img className='h-[200px] w-[136px] block border-2 border-palette-4 rounded-md shadow-md'
              src={thumbnail} 
              alt={bookData.title}/>
             </a>
