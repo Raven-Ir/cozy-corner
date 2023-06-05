@@ -3,24 +3,15 @@ import '../index.css'
 import axios from 'axios';
 import Book from '../Components/Book';
 import  requestsBestSellerNYT from '../ApiRequests';
-import { useNavigate } from 'react-router';
-import { UserAuth } from '../context/AuthContext';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
-  const nav = useNavigate();
-  const { user } = UserAuth();
   
   useEffect(() => {
     axios.get(requestsBestSellerNYT.bookSeries)
       .then(results => setBooks(results.data.results.books))
       .catch(error => console.log(error));
   }, []);
-
-  user?.email ? nav('/library') : console.log('not logged in');
-
-
-  console.log(books);
 
   return (
     <>

@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Profile1 from "../Assets/profile.jpg";
 import { UserAuth } from "../context/AuthContext";
 import axios from "axios";
+import SearchResults from "./SearchResults";
 
 const NavBar = () => {
     const { user, logOut } = UserAuth();
@@ -51,13 +52,18 @@ const NavBar = () => {
                             value={search}
                             onKeyUp={searchBook}
                         />
+                        {bookData.map((item, id) => (
+                            <SearchResults data={item.volumeInfo}  key={id}/> 
+                        ))}
                     </div>
                     
 
                     <div className="flex justify-items-end"> 
                         <button onClick={buttonLogOut} className='but m-2 w-36 h-12 bg-palette-5 rounded-xl text-3xl text-palette-1'> Log Out </button>
                         <div>
-                            <img src={Profile1} className="ring-black rounded-full w-12 h-12 shadow-md m-2" alt="User"/>
+                            <Link to='/library'>
+                             <img src={Profile1} className="ring-black rounded-full w-12 h-12 shadow-md m-2" alt="User"/>
+                             </Link>
                         </div>
                     </div>
                 </div>

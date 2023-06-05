@@ -2,9 +2,7 @@ import React from 'react'
 
 const Book = ( { bookData } ) => {
 
-    console.log(bookData.volumeInfo);
-
-    var thumbnail= bookData.book_image
+  var thumbnail= bookData.book_image
   return (
     <>
         <div className='inline-block items-center cursor-pointer p-2'>
