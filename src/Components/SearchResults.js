@@ -7,8 +7,10 @@ const SearchResults = ( data ) => {
   const date = data.data.publishedDate;
   const language = data.data.language;
 
+
+
   return (
-    <>
+    <div>
       <table className="h-auto w-96 border-2 border-b-0 border-palette-5 rounded-t-sm">
         <tr>
           <td><img src={imageUrl} className="w-24 h-46 rounded-sm" alt="Book Cover"/></td>
@@ -29,9 +31,9 @@ const SearchResults = ( data ) => {
             <button className='but m-2 w-24 h-8 bg-palette-1 rounded-xl text-sm text-palette-5'> View Details </button>
           </table>        
         </tr>
-    </table>
+      </table>
     
-    </>
+    </div>
   )
 }
 
