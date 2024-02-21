@@ -1,40 +1,42 @@
 import React from 'react'
 
-const SearchResults = ( data ) => {
-  const title = data.data.title;
-  const imageUrl = data.data.imageLinks && data.data.imageLinks.thumbnail;
-  const author = data.data.authors;
-  const date = data.data.publishedDate;
-  const language = data.data.language;
-
-
-
+const SearchResults = (data) => {
+  console.log(data.data);
+  
   return (
-    <div>
-      <table className="h-auto w-96 border-2 border-b-0 border-palette-5 rounded-t-sm">
-        <tr>
-          <td><img src={imageUrl} className="w-24 h-46 rounded-sm" alt="Book Cover"/></td>
-          <table>
-            <tr>
-              <td className=' font-bold '>{title}</td>
-            </tr>
-            <tr>
-              <td>{author}</td>
-            </tr>
-            <tr>
-              <td>{date}</td>
-            </tr>
-            <tr>
-              <td>{language}</td>
-            </tr>
-            <button className='but m-2 w-24 h-8 bg-palette-5 rounded-xl text-sm text-palette-1'> Add to Library </button>
-            <button className='but m-2 w-24 h-8 bg-palette-1 rounded-xl text-sm text-palette-5'> View Details </button>
-          </table>        
+    <div className='w-auto fixed h-80 overflow-scroll scrollbar-hide drop-shadow-xl'>
+      <table className=''>
+      {data.data.map((book, index) => (
+        <tr key={index}>
+          <td><img height={85} width={65} src={book.volumeInfo.imageLinks.thumbnail} alt='book cover'/></td>
+          <td>
+            <p className='font-bold text-lg w-64'>{book.volumeInfo.title}</p>
+            <p>{book.volumeInfo.authors}</p>
+            <p>{book.volumeInfo.publishedDate}</p>
+            <p>{book.volumeInfo.language}</p>
+          </td>
+          <td>
+            <button className='but bg-palette-5 text-palette-1 p-2 rounded-xl m-2 w-28'>Add to Library</button>
+            <br></br>
+            <button className='but bg-palette-1 font-bold text-palette-5 p-2 rounded-xl m-2 w-28'>Details</button>
+          </td>
         </tr>
+      ))}
       </table>
-    
     </div>
   )
 }
 
 export default SearchResults
+
+/*
+  bookData.map((item, id) => (
+   <SearchResults data={item.volumeInfo}  key={id}/> 
+  ))}
+
+  const title = data.data.title;
+  const imageUrl = data.data.imageLinks && data.data.imageLinks.thumbnail;
+  const author = data.data.authors;
+  const date = data.data.publishedDate;
+  const language = data.data.language;
+*/

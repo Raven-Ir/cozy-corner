@@ -28,9 +28,6 @@ const NavBar = () => {
         .catch(err => console.log(err))
         }
     }
-    
-    console.log(bookData);
-
 
     return (
         <>
@@ -52,9 +49,9 @@ const NavBar = () => {
                             value={search}
                             onKeyUp={searchBook}
                         />
-                        {bookData.map((item, id) => (
-                            <SearchResults data={item.volumeInfo}  key={id}/> 
-                        ))}
+                        
+                        <SearchResults data= {bookData}  /> 
+                        
                     </div>
                     
 
