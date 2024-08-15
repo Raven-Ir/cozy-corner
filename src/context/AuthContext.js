@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth, db } from '../firebase';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged} from 'firebase/auth'
-import { ref, set, get, child, onValue} from 'firebase/database'
+import { ref, set, onValue} from 'firebase/database'
 import Profile from '../Assets/profile.jpg'
 
 
@@ -36,7 +36,6 @@ export function AuthContextProvider({ children }) {
     onValue(reference, (snapshot) => {
       let books = snapshot.val();
       books.push(bookData);
-      
     })
   }
 
